@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="blueBg">
+            <div class="box registro">
+               <h2>Já Possui uma Conta ?</h2> 
+               <button class="registroBtn">Entrar</button>
+            </div>  
+            <div class="box login">
+                <h2>Não Possui uma Conta ?</h2> 
+                <button class="loginBtn">Registrar</button>
+             </div>  
+        </div>
+        <div class="formBox">
+            <div class="form loginForm">
+                <form>
+                    <h3>Entrar</h3>
+                    <input type="text" placeholder="Usuário">
+                    <input type="password" placeholder="Senha">
+                    <input type="submit" value="Login">
+                    <a href="#" class="esqueceu">Esqueceu a senha</a>
+                </form>
+            </div>
+            
+            <div class="form registroForm">
+                <form>
+                    <h3>Registrar</h3>
+                    <input type="text" placeholder="Usuário">
+                    <input type="text" placeholder="Endereço de Email">
+                    <input type="password" placeholder="Senha">
+                    <input type="password" placeholder="Confirmar Senha">
+                    <input type="submit" value="Registrar">
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        const registroBtn = document.querySelector('.registroBtn');
+        const loginBtn = document.querySelector('.loginBtn');
+        const formBox = document.querySelector('.formBox');
+        const body = document.querySelector('body');
+
+        loginBtn.onclick = function(){
+            formBox.classList.add('active')
+            body.classList.add('active')
+        }
+
+        registroBtn.onclick = function(){
+            formBox.classList.remove('active')
+            body.classList.remove('active')
+        }
+    </script>
+</body>
+</html>
